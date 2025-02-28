@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow-x: hidden;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            padding: 50px 20px;
+            background: rgba(255, 183, 197, 0.8);
+            color: #5a1a2c;
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .subtext {
+            font-size: 22px;
+            color: #6d263d;
+            margin-top: -10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            max-width: 30%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            color: red;
+            animation: floatHeart 6s linear infinite;
+        }
+        .doodle {
+            position: absolute;
+            font-size: 30px;
+            color: #ff4081;
+            opacity: 0.8;
+            animation: floatDoodle 8s linear infinite;
+        }
+        @keyframes floatHeart {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+        @keyframes floatDoodle {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "100vh";
+            heart.style.animationDuration = Math.random() * 2 + 4 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        function createDoodle() {
+            const doodles = ["💖", "🌸", "💫", "✨", "🌙"];
+            const doodle = document.createElement("div");
+            doodle.innerHTML = doodles[Math.floor(Math.random() * doodles.length)];
+            doodle.classList.add("doodle");
+            doodle.style.left = Math.random() * 100 + "vw";
+            doodle.style.top = "100vh";
+            doodle.style.animationDuration = Math.random() * 3 + 5 + "s";
+            document.body.appendChild(doodle);
+            setTimeout(() => doodle.remove(), 8000);
+        }
+        setInterval(createHeart, 300);
+        setInterval(createDoodle, 1000);
+    </script>
+</head>
+<body>
+    <div class="header">Happy 1-Month Anniversary, My Love ❤️</div>
+    <p class="subtext">Every moment with you is special, and I cherish them all.</p>
+    <div class="image-gallery">
+        <img src="your-image1.jpg" alt="Our Picture 1">
+        <img src="your-image2.jpg" alt="Our Picture 2">
+        <img src="your-image3.jpg" alt="Our Picture 3">
+    </div>
+    <div class="container">
+        <p>Heyy shivani, this past month was THE BEST, and i literally mean it. Every moment with u is so special and im looking forward to spend more time with you and i want you to know, that I LOVE YOU <3 a lottttt and i wish to see you smile every moment cuz.... just look at you, even right now, so gorgeous and pretty, honestly cant believe tht someone like you fell for me and im really thankful to god tht this happend. I'm never gonna give up on you cuz im not a dumbass, you are literally one in a BILLION and im never sacrifising you for anything cuz u mean a lotttttt to me. I'm really excited for our journey in the future and lets hope for the best and i just want you to know tht im gonna stand by you no matter what. Love youuuuu ❤️❤️❤️❤️❤️❤️</p>
+    </div>
+</body>
+</html>
+
